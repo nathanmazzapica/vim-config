@@ -33,7 +33,7 @@ augroup END
 set incsearch
 
 " Case insensitive search unless capitalized"
-
+" hi
 set ignorecase
 set smartcase
 
