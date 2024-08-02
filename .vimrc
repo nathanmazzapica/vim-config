@@ -44,3 +44,9 @@ colorscheme desert
 set autoindent
 set smartindent
 
+" Clear terminal on exit
+
+augroup AutoClearTerminal
+	autocmd!
+	autocmd VimLeave * !clear
+augroup END
