@@ -44,9 +44,15 @@ colorscheme desert
 set autoindent
 set smartindent
 
-" Clear terminal on exit
+" Clear terminal on vim exit
 
 augroup AutoClearTerminal
 	autocmd!
 	autocmd VimLeave * !clear
+augroup END
+
+augroup TrimWhitespace
+	autocmd!
+	autocmd BufWritePre * %s/\s\+$//e
+	autocmd BufWritePre * %s/\n\+\%$//e
 augroup END
